@@ -50,7 +50,7 @@ class VoucherWorker extends AMQPWorker
 
         $result = curl_exec($ch);
         if (curl_errno($ch)) {
-            throw Exception('error: ' . curl_error($ch));
+            throw new Exception('error: ' . curl_error($ch));
         }
 
         echo 'inserted record' . PHP_EOL;
